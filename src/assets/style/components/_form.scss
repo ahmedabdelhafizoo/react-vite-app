@@ -1,0 +1,31 @@
+.form {
+  &__input {
+    outline: none;
+    border: 0.5px solid #d8d8d8;
+    border-radius: 24px;
+    padding: 11px 15px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s;
+    @include media-breakpoint-down(lg) {
+      padding: 8px 15px;
+    }
+    &:focus {
+      border-color: #000;
+    }
+    &--search {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.932' height='24' viewBox='0 0 23.932 24'%3E%3Cpath d='M2597.471,418l-7.014-7.014a9.277,9.277,0,1,0-1.678,1.661l7.022,7.022a1.18,1.18,0,0,0,1.67-1.669Zm-21.226-12.716a6.909,6.909,0,1,1,6.909,6.909A6.918,6.918,0,0,1,2576.245,405.282Z' transform='translate(-2573.885 -396.013)'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      padding-left: 48px;
+    }
+
+    &[type=number] {
+      -moz-appearance: textfield;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+}

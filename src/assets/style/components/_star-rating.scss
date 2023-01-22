@@ -1,0 +1,28 @@
+.rating-box {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 3px;
+
+  label {
+    display: inline-block;
+    color: #f6f6f6;
+    cursor: pointer;
+    pointer-events: none;
+    font-size: 25px;
+    transition: color 0.2s;
+    margin-bottom: 0;
+    svg path {
+      transition: fill .3s;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  label:hover svg path,
+  label:hover ~ label svg path,
+  input:checked ~ label svg path {
+    fill: #ffb900;
+  }
+}
